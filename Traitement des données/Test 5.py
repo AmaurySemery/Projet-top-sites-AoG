@@ -25,12 +25,14 @@ for i in range(n-1):
 
 print(Name, Classement, Votes)
 
-def XP(i):
-    if i < 50:
-        i = 0
-    if i >= 50 and i < 100:
-        i = 3
-    if i > 100:
-        i = 5
+def XP(x):
+    for i in range(n-1):
+        if i < 50:
+            x = 0
+        if i >= 50 and i < 100:
+            x = 3
+        if i > 100:
+            x = 5
+        return x
 
-print map(XP, Votes)
+print map(XP, [1,2,3,4,5])
