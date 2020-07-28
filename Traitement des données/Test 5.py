@@ -22,5 +22,17 @@ for i in range(n-1):
     Votes.append(int(Tableau[i][2]))
 
 
-
 print(Name, Votes)
+
+def conversion(Votes):
+    XP =[]
+    for i in range(n-1):
+        if i >= 50 and i < 100:
+            i = 3
+        if i >= 100:
+            i = 5
+        if i < 50:
+            i = 0
+        print(XP)
+
+conversion(Votes)
