@@ -30,3 +30,8 @@ ClassementV2 = Classement[0:30]
 VotesV2 = Votes[0:30]
 
 print(NameV2[0],ClassementV2[0],VotesV2[0])
+
+def liste_finale():
+    XP = []
+    for line in f:
+        
