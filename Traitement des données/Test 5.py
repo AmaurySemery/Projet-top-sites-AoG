@@ -21,5 +21,17 @@ for i in range(n-1):
     Name.append(Tableau[i][0])
     Votes.append(int(Tableau[i][2]))
 
-
 print(Name, Votes)
+
+while Votes[i+1]:
+    if i < 50:
+        i = 0
+    elif i >= 50 and i < 100:
+        i = 3
+    elif i > 100:
+        i = 5
+    return i
+    
+    
+
+
