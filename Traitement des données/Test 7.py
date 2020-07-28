@@ -23,18 +23,14 @@ print(Classement)
 print(Votes)
 
 
+def convertisseur(Votes):
+    XP = []
+    for c in range(c+1):
+        convertisseur = lambda c: c==int(3) if c >= 50 and c < 100 else(c==int(5) if c > 100 else c == int(0))
+        print(XP)
 
-convertisseur = lambda c: c==int(3) if c >= 50 and c < 100 else(c==int(5) if c > 100 else c == int(0))
-print(a, 'est:', convertisseur(c))
+print(convertisseur(Votes))
 
-XP_0 = lambda c: c < 50
-XP_3 = lambda c: c >= 50 and c <100
-XP_5 = lambda c : c > 100
-
-liste_XP = Votes
-Liste_XP = list(filter(XP_0 XP_))
-
-map(lambda c: 'lower' if c < 50 'higher' if c > 100 else 'soso', Votes)
 
 def conversion(c):
     if c < 50:
