@@ -21,7 +21,7 @@ for ligne in filename:
 print(Name)
 print(Votes)
 print(Classement)
-print(len(Votes)) # Compte le nombre d'items de la liste
+print(len(Votes))
 
 
 def convertisseur(Votes):
