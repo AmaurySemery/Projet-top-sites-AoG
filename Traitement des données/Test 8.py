@@ -7,10 +7,14 @@ f = open('C:\Divers\Python codes\Projet-top-sites-AoG\Dossiers-CSV\classement_SS
 filename =  csv.reader(f)
 
 Name = []
-Classement = []
 Votes = []
 XP = []
 
+for ligne in filename:
+    a = ligne[0]
+    b = int(ligne[1])
+    Name.append(a)
+    Votes.append(b)
 
 def convertisseur(converti):
     s = 0
@@ -30,17 +34,8 @@ def liste_XP(Votes):
         XP.append(e)
         return XP
 
-for ligne in filename:
-    a = ligne[0]
-    b = int(ligne[1])
-    c = int(ligne[2])
-    Name.append(a)
-    Classement.append(b)
-    Votes.append(c)
-
 XP = liste_XP(Votes)
 print(Name)
 print(Votes)
-print(Classement)
 print(XP)
 print(len(Votes)) # Compte le nombre d'items de la liste
