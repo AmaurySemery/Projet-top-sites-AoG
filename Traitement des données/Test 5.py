@@ -24,15 +24,3 @@ for i in range(n-1):
     Votes.append(int(Tableau[i][2]))
 
 print(Name, Classement, Votes)
-
-def XP(x):
-    for i in range(n-1):
-        if i < 50:
-            x = 0
-        if i >= 50 and i < 100:
-            x = 3
-        if i > 100:
-            x = 5
-        return x
-
-print map(XP, [1,2,3,4,5])
