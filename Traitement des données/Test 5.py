@@ -24,3 +24,9 @@ for i in range(n-1):
     Votes.append(int(Tableau[i][2]))
 
 print(Name, Classement, Votes)
+
+NameV2 = Name[0:30]
+ClassementV2 = Classement[0:30]
+VotesV2 = Votes[0:30]
+
+print(NameV2[0],ClassementV2[0],VotesV2[0])
