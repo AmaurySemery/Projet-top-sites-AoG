@@ -34,10 +34,11 @@ def convertisseur(converti):
             s = s+5
         return s
 
+
 def liste_XP(Votes):
     XP = []
     for i in range(len(Votes)):
-        d = convertisseur(converti)
+        d = convertisseur(Votes)
         XP.append(d)
         return XP
 
