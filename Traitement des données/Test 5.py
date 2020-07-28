@@ -3,6 +3,7 @@ import csv
     #Tableau sera une liste de listes [[t1, acc1], [t2,acc2] ,... , [tn,accn]]
 Tableau = []
 Name = []
+Classement = []
 Votes = []
      
     #ouverture et lecture du fichier csv
@@ -19,19 +20,23 @@ f.close
 n = len(Tableau)
 for i in range(n-1):
     Name.append(Tableau[i][0])
+    Classement.append(int(Tableau[i][1]))
     Votes.append(int(Tableau[i][2]))
 
-print(Name, Votes)
+print(Name, Classement, Votes)
 
-while Votes[i+1]:
-    if i < 50:
-        i = 0
-    elif i >= 50 and i < 100:
-        i = 3
-    elif i > 100:
-        i = 5
-    return i
+#Création d'un fichier à partir de la liste tableau
+with open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/tableau_test.csv','w',newline='') as f:  #Ouverture du fichier CSV en écriture
+    ecrire=csv.writer(f)                        # préparation à l'écriture
+    for i in tableau:                           # Pour chaque ligne du tableau...  
+        ecrire.writerow(Name)                # Mettre dans la variable ecrire cette nouvelle ligne      
+
+#Ajout d'une ligne
+with open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/tableau_test.csv','a',newline='') as f:       #Ajout d'une ligne dans le fichier csv
+    ecrire=csv.writer(f)                             # préparation à l'écriture   
+    ecrire.writerow(Classement)        # Mettre dans écrire cette nouvelle ligne
+
+with open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/tableau_test.csv','a',newline='') as f:
+    ecrire=csv.writer(f) 
+    ecrire.writerow(Votes)
     
-    
-
-
