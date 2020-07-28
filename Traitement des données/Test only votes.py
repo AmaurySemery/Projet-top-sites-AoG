@@ -12,6 +12,14 @@ for ligne in filename:
     a = ligne[0]
     Votes.append(a)
 
+XP = []
+for x in range(len(Votes)):
+    e = convertisseur(Votes)
+    XP.append(x**2)
+    return XP
+
+print(XP)
+
 def convertisseur(converti):
     s = 0
     for i in converti:
@@ -27,7 +35,7 @@ def liste_XP(Votes):
     XP = []
     for i in range(0,len(g)):
         e = convertisseur(Votes)
-        XP.append(s)
+        XP.insert(i,x)
         return XP
 
 print(XP)
