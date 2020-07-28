@@ -25,18 +25,40 @@ for i in range(n-1):
 
 print(Name, Classement, Votes)
 
-#Création d'un fichier à partir de la liste tableau
-with open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/tableau_test.csv','w',newline='') as f:  #Ouverture du fichier CSV en écriture
-    ecrire=csv.writer(f)                        # préparation à l'écriture
-    for i in tableau:                           # Pour chaque ligne du tableau...  
-        ecrire.writerow(Name)                # Mettre dans la variable ecrire cette nouvelle ligne      
+import pandas as pd
 
-#Ajout d'une ligne
-with open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/tableau_test.csv','a',newline='') as f:       #Ajout d'une ligne dans le fichier csv
-    ecrire=csv.writer(f)                             # préparation à l'écriture   
-    ecrire.writerow(Classement)        # Mettre dans écrire cette nouvelle ligne
+# the file names
+f1 = Name
+f2 = Classement
+f3 = Votes
+out_f = "/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/tableau_test.csv"
 
-with open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/tableau_test.csv','a',newline='') as f:
-    ecrire=csv.writer(f) 
-    ecrire.writerow(Votes)
-    
+# read the files
+df1 = pd.read_csv(f1)
+df2 = pd.read_csv(f2)
+df3 = pd.read_csv(f3)
+
+# get the keys
+keys1 = list(df1)
+keys2 = list(df2)
+keys3 = list(df3)
+
+# merge both files
+for idx, row in df2.iterrows():
+    data = df1[df1['id'] == row['id']]
+
+    # if row with such id does not exist, add the whole row
+    if data.empty:
+        next_idx = len(df1)
+        for key in keys2:
+            df1.at[next_idx, key] = df2.at[idx, key]
+
+    # if row with such id exists, add only the missing keys with their values
+    else:
+        i = int(data.index[0])
+        for key in keys2:
+            if key not in keys1:
+                df1.at[i, key] = df2.at[idx, key]
+
+# save the merged files
+df1.to_csv(out_f, index=False, encoding='utf-8', quotechar="", quoting=csv.QUOTE_NONE)
