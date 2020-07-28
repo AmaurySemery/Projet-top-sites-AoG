@@ -1,5 +1,13 @@
+#ouverture d'un fichier CSV...
+#... création de la liste des lignes nommée tableau...
+#... et affichage des lignes.
 import csv
-with open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers CSV/classement_SSAoG_CSV.csv', newline'') as csvfile:
-    spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-    for row in spamreader:
-        print(', '.join(row))
+with open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/classement_SSAoG_CSV.csv',newline='') as f:         #Ouverture du fichier CSV
+    tableau=[]
+    lire=csv.reader(f)                            #chargement des lignes du fichier csv
+    print('',end='\n')
+    print('Affichage des lignes du tableau',end='\n')
+    for ligne in lire:                            #Pour chaque ligne... 
+        print(ligne, end='\n')                    #...affichage de la ligne dans la console ...
+        tableau.append(ligne)                     #...on ajoute la ligne dans la liste ...
+                                                  #...de liste nommée tableau
