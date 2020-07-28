@@ -29,18 +29,16 @@ def liste_XP(Votes):
         e = convertisseur(Votes)
         XP.append(e)
         return XP
-        print(i, e[i])
 
 for ligne in filename:
     a = ligne[0]
     b = int(ligne[1])
     c = int(ligne[2])
-    d = int(ligne[3])
     Name.append(a)
     Classement.append(b)
     Votes.append(c)
-    XP.insert(d)
 
+XP = liste_XP(Votes)
 print(Name)
 print(Votes)
 print(Classement)
