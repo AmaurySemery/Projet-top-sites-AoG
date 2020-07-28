@@ -19,6 +19,8 @@ f.close
 n = len(Tableau)
 for i in range(n-1):
     Name.append(Tableau[i][0])
-    Votes.append(Tableau[i][2])
-    
+    Votes.append(int(Tableau[i][2]))
+
+
+
 print(Name, Votes)
