@@ -9,19 +9,8 @@ filename =  csv.reader(f)
 Name = []
 Classement = []
 Votes = []
+XP = []
 
-for ligne in filename:
-    a = ligne[0]
-    b = int(ligne[1])
-    c = int(ligne[2])
-    Name.append(a)
-    Classement.append(b)
-    Votes.append(c)
-
-print(Name)
-print(Votes)
-print(Classement)
-print(len(Votes)) # Compte le nombre d'items de la liste
 
 def convertisseur(converti):
     s = 0
@@ -34,12 +23,26 @@ def convertisseur(converti):
             s = s+5
         return s
 
-
 def liste_XP(Votes):
-    XP = []
-    for i in range(len(Votes)):
-        d = convertisseur(Votes)
-        XP.append(d)
+    g = Votes[:]
+    for i in range(0,len(g)):
+        e = convertisseur(Votes)
+        XP.append(e)
         return XP
+        print(i, e[i])
 
-print(liste_XP(Votes))
+for ligne in filename:
+    a = ligne[0]
+    b = int(ligne[1])
+    c = int(ligne[2])
+    d = int(ligne[3])
+    Name.append(a)
+    Classement.append(b)
+    Votes.append(c)
+    XP.insert(d)
+
+print(Name)
+print(Votes)
+print(Classement)
+print(XP)
+print(len(Votes)) # Compte le nombre d'items de la liste
