@@ -13,7 +13,6 @@ with open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/cl
                                      #...de liste nommée tableau
 
 #On obtient la liste des lignes du tableau
-print(tableau0)
 
-for ligne in lire: # ligne est une liste de valeurs de colonnes
-            tableau0.writerow([ligne[0]])
+
+print(tableau0[0])
