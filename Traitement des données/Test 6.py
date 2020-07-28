@@ -13,9 +13,9 @@ def liste_finale(filename):
         Name, Classement, Votes = line.split(',')
         data = {}
         data["Name"]=Name.strip()
-        data["Classement"]=Classement.string()
-        data["Votes"]=Votes.string()
-        liste.append(date)
+        data["Classement"]=Classement.strip()
+        data["Votes"]=Votes.strip()
+        liste.append(data)
     return liste
 
 print(liste_finale(filename))
