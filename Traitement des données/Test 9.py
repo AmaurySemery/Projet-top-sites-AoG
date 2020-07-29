@@ -17,6 +17,7 @@ def conversion(number):
 Name = []
 Votes = []
 XP = []
+Final = []
 
 for l in filename:
     a = l[0]
@@ -25,4 +26,12 @@ for l in filename:
     Votes.append(b)
     XP.append(conversion(b))
 
-print(Name,Votes,XP)
+# print(Name,Votes,XP)
+
+for x,y in zip(Name,XP):
+    a = x
+    b = y
+    Final.append(a)
+    Final.append(b)
+
+print(Final)
