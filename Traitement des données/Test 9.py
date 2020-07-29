@@ -33,6 +33,6 @@ for x,y in zip(Name,XP):
     b = y
     Final.append(a)
     Final.append(b)
-    #print(x,y)
+    print([x,y])
 
-print(Final)
+print("AoG compte", len(Votes),"votants pour cette session.")
