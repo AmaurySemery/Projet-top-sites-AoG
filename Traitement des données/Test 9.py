@@ -33,5 +33,6 @@ for x,y in zip(Name,XP):
     b = y
     Final.append(a)
     Final.append(b)
+    #print(x,y)
 
 print(Final)
