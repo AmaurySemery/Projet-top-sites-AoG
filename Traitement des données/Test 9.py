@@ -25,3 +25,4 @@ for l in filename:
     Votes.append(b)
     XP.append(conversion(b))
 
+print(Name,Votes,XP)
