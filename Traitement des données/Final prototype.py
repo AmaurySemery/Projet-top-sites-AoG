@@ -4,13 +4,13 @@ import csv
 
 import pandas as pd
 f=pd.read_csv("/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade_classement_SSAoG_CSV.csv",sep =';')
-print(f)
+#print(f)
 keep_col = ['Pseudo','Total']
-print(keep_col)
+#print(keep_col)
 new_f = f[keep_col]
-print(new_f)
+#print(new_f)
 new_f.to_csv("/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade1_classement_SSAoG_CSV.csv", index=False)
-print(keep_col)
+#print(keep_col)
 
 # Je récupère le fichier nouvellement créé pour travailler dessus. Je retravaille ensuite le fichier pour supprimer la première ligne, autrement, la chaîne de caractère en première ligne va m'empêcher de faire mes calculs de conversions en int
 
