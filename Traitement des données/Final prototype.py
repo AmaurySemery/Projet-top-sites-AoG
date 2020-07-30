@@ -1,4 +1,7 @@
 import csv
+
+# Lire le fichier, puis garder les colonnes qui m'intéressent, le nouveau tableau étant envoyé dans un autre fichier
+
 import pandas as pd
 f=pd.read_csv("/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade_classement_SSAoG_CSV.csv",sep =';')
 print(f)
@@ -9,8 +12,19 @@ print(new_f)
 new_f.to_csv("/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade1_classement_SSAoG_CSV.csv", index=False)
 print(keep_col)
 
-f = open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade1_classement_SSAoG_CSV.csv', 'r')
+# Je récupère le fichier nouvellement créé pour travailler dessus. Je retravaille ensuite le fichier pour supprimer la première ligne, autrement, la chaîne de caractère en première ligne va m'empêcher de faire mes calculs de conversions en int
+
+with open("/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade1_classement_SSAoG_CSV.csv",'r') as f:
+    with open("/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade2_classement_SSAoG_CSV.csv",'w') as f1:
+        next(f) # skip header line
+        for line in f:
+            f1.write(line)
+
+# Je récupère le dernier fichier pour retravailler dessus.
+
+f = open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade2_classement_SSAoG_CSV.csv', 'r')
 filename =  csv.reader(f)
+
 
 
 def conversion(number):
@@ -30,7 +44,7 @@ Final = []
 
 for l in filename:
     a = l[0]
-    b = l[1]
+    b = int(l[1])
     Name.append(a)
     Votes.append(b)
     XP.append(conversion(b))
