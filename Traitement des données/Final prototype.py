@@ -35,7 +35,7 @@ def conversion(number):
     if number > 100:
         result = 5
     return result
-    #    print(+ int(result))
+    #print(+ int(result))
 
 Name = []
 Votes = []
