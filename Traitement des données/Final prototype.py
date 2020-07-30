@@ -1,17 +1,14 @@
 import csv
 
-with open("/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade_classement_SSAoG_CSV.csv","rb") as source:
-    rdr= csv.reader( source )
-with open("/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade1_classement_SSAoG_CSV.csv","wb") as result:
-    wtr = csv.writer( result )
-    for r in rdr:
-        wtr.writerow((r[0], r[1]))
+source = open("/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade_classement_SSAoG_CSV.csv","rb")
+csv.reader(source)
 
-in_iter= ( (r[0], r[1], r[3], r[4]) for r in rdr )
-wtr.writerows( in_iter )
+for r in source:
+    del(r[1])
+    del(r[3])
+    del(r[4])
 
-del r[1], r[3], r[4]
-wtr.writerow( r )
+
 
 f = open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade_classement_SSAoG_CSV.csv', 'r')
 filename =  csv.reader(f)
