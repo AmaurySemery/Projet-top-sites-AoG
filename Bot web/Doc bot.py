@@ -8,7 +8,7 @@ req = urllib2.Request(url)
 reponse = urllib2.urlopen(req)
 html = reponse.read()
 
-# Nous voulons voir la page http://www.google.fr, on utilise urllib2.request pour préparer la requête que l'on va stocker dans req, ensuite on exécute cette dernière via urlib2.urlopen.
+# Via la page http://www.google.fr, on utilise urllib2.request pour préparer la requête que l'on va stocker dans req, ensuite on exécute cette dernière via urlib2.urlopen.
 # Cette fonction nous renvoie la réponse du serveur web mais ici nous voulons récupérer le html de la page, on utilise reponse.read pour cela.
 
 import urllib
