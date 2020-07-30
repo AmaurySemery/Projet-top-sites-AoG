@@ -1,11 +1,17 @@
 import csv
+import pandas as pd
+f=pd.read_csv("/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade_classement_SSAoG_CSV.csv")
+keep_col = ['nom','classement','votes','entrée','sortie']
+new_f = f[keep_col]
+new_f.to_csv("/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade1_classement_SSAoG_CSV.csv", index=False)
+print(keep_col)
 
-source = open("/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade_classement_SSAoG_CSV.csv","rb")
-csv.reader(source)
-
-for r in source:
-    del r[1,3,4]
-
+import csv
+with open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade_classement_SSAoG_CSV.csv', 'r') as inp, open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade1_classement_SSAoG_CSV.csv', 'wb') as out:
+    writer = csv.writer(out)
+    for row in csv.reader(inp):
+        if row[1] != " 0":
+            writer.writerow(row)
 
 
 f = open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade_classement_SSAoG_CSV.csv', 'r')
