@@ -48,15 +48,21 @@ for l in filename:
     Name.append(a)
     Votes.append(b)
     XP.append(conversion(b))
-    
 
 # print(Name,Votes,XP)
+print("<blockquote>[center][b]Récompenses du 22/06 au 28/06[/b][/center]")
+print("Pour rappel, vous gagnez 3 XP par semaine si vous effectuez au moins <b>50</b> votes sur celle-ci.")
+print("Vous gagnez 5 XP au total si vous êtes parmi les 5 meilleurs votants ou que vous avez réalisé plus de 100 votes.")
+print("Les récompensés sont donc les suivants :[list=1]")
 
 for x,y in zip(Name,XP):
     a = x
     b = y
     Final.append(a)
     Final.append(b)
-    print([x,y])
+    #print([x,y])
+    print("[*][b]"+ x+ "[/b]",":", y,"XP")
+
+print("[/list]")
 
 print("AoG compte", len(Votes),"votants pour cette session.")
