@@ -65,8 +65,14 @@ for x,y in zip(Name,XP):
     Final.append(a)
     Final.append(b)
     #print([x,y])
-    print("[*][b]"+ x+ "[/b]",":", y,"XP")
+    print("[*][b]"+ x+ "[/color][/b]",":", y,"XP")
 
 print("[/list]")
 
 print("AoG compte", len(Votes),"votants pour cette session.")
+print("--------")
+print("Légende (code couleur faction à placer entre [*] et [b] dans le message) :")
+print("Saint : [color=#4A6A87]")
+print("Berserker : [color=#A21713]")
+print("Marina : [color=#228A94]")
+print("Oracle : [color=#B47C1C]")
