@@ -1,13 +1,11 @@
 import csv
 
-f = open("yourfile.txt","r")
-lines = f.readlines()
-f.close()
-f = open("yourfile.txt","w")
-for line in lines:
-  if line!="nickname_to_delete"+"\n":
-    f.write(line)
-f.close()
+with open("/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/classement_SSAoG_CSV.csv",'r') as f:
+    with open("updated_test.csv",'w') as f1:
+        next(f) # skip header line
+        for line in f:
+            f1.write(line)
+
 
 f = open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/classement_SSAoG_CSV.csv', 'r')
 filename =  csv.reader(f)
