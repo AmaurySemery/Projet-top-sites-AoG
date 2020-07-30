@@ -4,9 +4,7 @@ source = open("/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CS
 csv.reader(source)
 
 for r in source:
-    del(r[1])
-    del(r[3])
-    del(r[4])
+    del r[1,3,4]
 
 
 
