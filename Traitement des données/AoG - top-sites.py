@@ -211,7 +211,7 @@ print("[/list]")
 
 print("AoG compte", len(Votes),"votants pour cette session.")
 print("--------")
-print("Légende (code couleur faction à placer entre [*] et [b] dans le message) :")
+print("Légende :")
 print("Saint : [color=#4A6A87]")
 print("Berserker : [color=#A21713]")
 print("Marina : [color=#228A94]")
