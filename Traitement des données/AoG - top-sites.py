@@ -45,7 +45,9 @@ def conversion(number):
     return result
     #print(+ int(result))
 
+## En cas de validation d'un nouveau personnage, l'intégrer ici.
 def change(nom):
+    #Berserkers
     if nom == 'Alastair':
         nom = '[color=#A21713]Alastair'
     if nom == 'Aelinor':
@@ -72,7 +74,7 @@ def change(nom):
         nom = '[color=#A21713]Liv'
     if nom == 'Lymsleia':
         nom = '[color=#A21713]Lymsleia'
-    if nom == 'Mérion':
+    if nom == 'Merion':
         nom = '[color=#A21713]Mérion'
     if nom == 'Satine':
         nom = '[color=#A21713]Satine'
@@ -80,18 +82,97 @@ def change(nom):
         nom = '[color=#A21713]Velizara'
     if nom == 'Zvezdan':
         nom = '[color=#A21713]Zvezdan'
-    if nom == '':
-        nom = '[color=#4A6A87]'
-    if nom == '':
-        nom = '[color=#4A6A87]'
-    if nom == '':
-        nom = '[color=#4A6A87]'
-    if nom == '':
-        nom = '[color=#4A6A87]'
-    if nom == '':
-        nom = '[color=#4A6A87]'
-    if nom == '':
-        nom = '[color=#4A6A87]'
+    #Saints
+    if nom == 'Aegis':
+        nom = '[color=#4A6A87]Aegis'
+    if nom == 'Airoth':
+        nom = '[color=#4A6A87]Airoth'
+    if nom == 'Algebar':
+        nom = '[color=#4A6A87]Algebar'
+    if nom == 'Argus':
+        nom = '[color=#4A6A87]Argus'
+    if nom == 'Childeric':
+        nom = '[color=#4A6A87]Childéric'
+    if nom == 'Diane':
+        nom = '[color=#4A6A87]Diane'
+    if nom == 'Elias':
+        nom = '[color=#4A6A87]Elias'
+    if nom == 'Eudoxia':
+        nom = '[color=#4A6A87]Eudoxia'
+    if nom == 'Khoren':
+        nom = '[color=#4A6A87]Khoren'
+    if nom == 'Kilian':
+        nom = '[color=#4A6A87]Kilian'
+    if nom == 'Lesath':
+        nom = '[color=#4A6A87]Lesath'
+    if nom == 'Mehry':
+        nom = '[color=#4A6A87]Mehry'
+    if nom == 'Morwenna':
+        nom = '[color=#4A6A87]Morwenna'
+    if nom == 'Nebu':
+        nom = '[color=#4A6A87]Nebu'
+    if nom == 'Odoroi':
+        nom = '[color=#4A6A87]Odoroï'
+    if nom == 'Paros':
+        nom = '[color=#4A6A87]Paros'
+    if nom == 'Ryme':
+        nom = '[color=#4A6A87]Ryme'
+    if nom == 'Sighild':
+        nom = '[color=#4A6A87]Sighild'
+    if nom == 'Silas':
+        nom = '[color=#4A6A87]Silas'
+    if nom == 'Tharros':
+        nom = '[color=#4A6A87]Tharros'
+    if nom == 'Theolus':
+        nom = '[color=#4A6A87]Theolus'
+    if nom == 'Xanathos':
+        nom = '[color=#4A6A87]Xanathos'
+    #Marinas
+    if nom == 'Aimana':
+        nom = '[color=#228A94]Aimana'
+    if nom == 'Asteria':
+        nom = '[color=#228A94]Asteria'
+    if nom == 'Calypso':
+        nom = '[color=#228A94]Calypso'
+    if nom == 'Dardanos':
+        nom = '[color=#228A94]Dardanos'
+    if nom == 'Deukalyion':
+        nom = '[color=#228A94]Deukalyion'
+    if nom == 'Drystan':
+        nom = '[color=#228A94]Drystan'
+    if nom == 'Emrys':
+        nom = '[color=#228A94]Emrys'
+    if nom == 'Endymion':
+        nom = '[color=#228A94]Endymion'
+    if nom == 'Lazare':
+        nom = '[color=#228A94]Lazare'
+    if nom == 'Orpheus':
+        nom = '[color=#228A94]Orpheus'
+    if nom == 'Selena':
+        nom = '[color=#228A94]Selena'
+    #Oracles
+    if nom == 'Adonis':
+        nom = '[color=#B47C1C]Adonis'
+    if nom == 'Celestia':
+        nom = '[color=#B47C1C]Celestia'
+    if nom == 'Cuchulainn':
+        nom = '[color=#B47C1C]Cuchulainn'
+    if nom == 'Diogene':
+        nom = '[color=#B47C1C]Diogène'
+    if nom == 'Esmelia':
+        nom = '[color=#B47C1C]Esmelia'
+    if nom == 'Kyrios':
+        nom = '[color=#B47C1C]Kyrios'
+    if nom == 'Lykeios':
+        nom = '[color=#B47C1C]Lykeios'
+    if nom == 'Rowena':
+        nom = '[color=#B47C1C]Rowena'
+    if nom == 'Rudjek':
+        nom = '[color=#B47C1C]Rudjek'
+    if nom == 'Sunilda':
+        nom = '[color=#B47C1C]Sunilda'
+    if nom == 'Yelo':
+        nom = '[color=#B47C1C]Yelo'
     else:
         nom = nom
     return nom
