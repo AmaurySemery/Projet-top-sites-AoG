@@ -61,8 +61,14 @@ for x,y in zip(Name,XP):
     Final.append(a)
     Final.append(b)
     #print([x,y])
-    print("[*][b]"+ x+ "[/b]",":", y,"XP")
+    print("[*][b]"+ x+ "[/b][/color]",":", y,"XP")
 
 print("[/list]")
 
 print("AoG compte", len(Votes),"votants pour cette session.")
+print("----------")
+print("Codes couleurs (insérer première partie de la balise entre [*] et [b] directement sur le message => ne pas changer le code):")
+print("Saint : [color=#4A6A87]")
+print("Berserker : [color=#A21713]")
+print("Oracle : [color=#B47C1C]")
+print("Marina : [color=#228A94]")
