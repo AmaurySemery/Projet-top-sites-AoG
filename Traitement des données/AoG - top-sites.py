@@ -45,6 +45,57 @@ def conversion(number):
     return result
     #print(+ int(result))
 
+def change(nom):
+    if nom == 'Alastair':
+        nom = '[color=#A21713]Alastair'
+    if nom == 'Aelinor':
+        nom = '[color=#A21713]Aelinor'
+    if nom == 'Akir':
+        nom = '[color=#A21713]Akir'
+    if nom == 'Bran Ruz':
+        nom = '[color=#A21713]Bran Ruz'
+    if nom == 'Brohos':
+        nom = '[color=#A21713]Brohos'
+    if nom == 'César':
+        nom = '[color=#A21713]César'
+    if nom == 'Chris':
+        nom = '[color=#A21713]Chris'
+    if nom == 'Elyra':
+        nom = '[color=#A21713]Elyra'
+    if nom == 'Esther':
+        nom = '[color=#A21713]Esther'
+    if nom == 'Haldor':
+        nom = '[color=#A21713]Haldor'
+    if nom == 'Jehane':
+        nom = '[color=#A21713]Jehane'
+    if nom == 'Liv':
+        nom = '[color=#A21713]Liv'
+    if nom == 'Lymsleia':
+        nom = '[color=#A21713]Lymsleia'
+    if nom == 'Mérion':
+        nom = '[color=#A21713]Mérion'
+    if nom == 'Satine':
+        nom = '[color=#A21713]Satine'
+    if nom == 'Velizara':
+        nom = '[color=#A21713]Velizara'
+    if nom == 'Zvezdan':
+        nom = '[color=#A21713]Zvezdan'
+    if nom == '':
+        nom = '[color=#4A6A87]'
+    if nom == '':
+        nom = '[color=#4A6A87]'
+    if nom == '':
+        nom = '[color=#4A6A87]'
+    if nom == '':
+        nom = '[color=#4A6A87]'
+    if nom == '':
+        nom = '[color=#4A6A87]'
+    if nom == '':
+        nom = '[color=#4A6A87]'
+    else:
+        nom = nom
+    return nom
+
 Name = []
 Votes = []
 XP = []
@@ -73,7 +124,7 @@ for x,y in zip(Name,XP):
     Final.append(a)
     Final.append(b)
     #print([x,y])
-    print("[*][b]"+ x+ "[/color][/b]",":", y,"XP")
+    print("[*][b]"+change(x)+"[/color][/b]",":", y,"XP")
 
 print("[/list]")
 
