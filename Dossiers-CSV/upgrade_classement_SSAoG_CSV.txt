@@ -1,4 +1,4 @@
-Pseudo;Classement;IDmark;ID+mark;Total
+# Pseudo;Classement;IDmark;ID+mark;Total
 Alastair;1;393;0;393
 Diane;2;237;0;237
 Esther;3;192;0;192
