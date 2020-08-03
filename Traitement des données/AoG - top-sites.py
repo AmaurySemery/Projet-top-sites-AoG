@@ -205,6 +205,7 @@ for x,y in zip(Name,XP):
 print("[/list]")
 
 print("AoG compte", len(Votes),"votants pour cette session.")
+print("Merci à vous et bon jeu sur AoG !")
 print("--------")
 print("Légende :")
 print("Saint : [color=#4A6A87]")
