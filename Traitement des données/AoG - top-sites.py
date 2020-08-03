@@ -33,8 +33,6 @@ with open(r"C:\Divers\Python codes\Projet-top-sites-AoG\Dossiers-CSV\upgrade1_cl
 f = open(r'C:\Divers\Python codes\Projet-top-sites-AoG\Dossiers-CSV\upgrade2_classement_SSAoG_CSV.csv', 'r')
 filename =  csv.reader(f)
 
-
-
 def conversion(number):
     if number < 50:
         result = 0
