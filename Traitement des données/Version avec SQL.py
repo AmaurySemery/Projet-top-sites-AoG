@@ -1,6 +1,7 @@
 ## Tu fais la commande "pip install csv" et "pip install pandas" sur le shell pour installer les modules
 
 import csv
+import pymysql
 
 # Lire le fichier, puis garder les colonnes qui m'intéressent, le nouveau tableau étant envoyé dans un autre fichier
 
