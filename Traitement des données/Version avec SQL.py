@@ -13,6 +13,7 @@ import pandas as pd
 ## Ici, tu mets le chemin de ton fichier de base CSV récupéré depuis top-booster (NB : "r" avant le chemin peut ne pas être obligatoire suivant sa structure)
 f=pd.read_csv(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/classement_SSAoG_CSV.csv",sep =';',comment='#')
 #print(f)
+
 keep_col = ['Pseudo','Total']
 #print(keep_col)
 new_f = f[keep_col]
@@ -48,9 +49,12 @@ cursor = connection.cursor()
 
 ## En cas de validation d'un nouveau personnage, l'intégrer ici.
 def change(nom):
-    request = "SELECT `Police` FROM `Joueurs` WHERE `Nom` LIKE"+ "\"" + nom + "\""
-    response = cursor.execute(request)
-    name = cursor.fetchone()
+    try:
+        request = "SELECT `Police` FROM `Joueurs` WHERE `Nom` LIKE"+ "\"" + nom + "\""
+        response = cursor.execute(request)
+        name = cursor.fetchone()
+    except Exception as error:
+        print("Le nom n'est pas valide ou n'existe pas dans la BDD")
     return str(name[0])
 
 Name = []
