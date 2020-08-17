@@ -1,3 +1,6 @@
+# Placer un except pour faire tourner le programme même si des noms ne correspondent pas à la BDD
+# Régler le problème de la ligne qui définit les noms de colonnes. C'est une ligne de commentaire donc elle n'est pas intégrée en l'état dans le programme
+
 ## Tu fais la commande "pip install csv" et "pip install pandas" sur le shell pour installer les modules
 
 import csv
@@ -7,7 +10,7 @@ import pymysql
 
 import pandas as pd
 ## Ici, tu mets le chemin de ton fichier de base CSV récupéré depuis top-booster (NB : "r" avant le chemin peut ne pas être obligatoire suivant sa structure)
-f=pd.read_csv(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade_classement_SSAoG_CSV.csv",sep =';')
+f=pd.read_csv(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/classement_SSAoG_CSV.csv",sep =';',comment='#')
 #print(f)
 keep_col = ['Pseudo','Total']
 #print(keep_col)
