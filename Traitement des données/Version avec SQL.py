@@ -34,6 +34,13 @@ with open(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/u
 f = open(r'/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade2_classement_SSAoG_CSV.csv', 'r')
 filename =  csv.reader(f)
 
+connection = pymysql.connect(host='popschool-willems.fr',
+                             user='amaury',
+                             password='amaury',
+                             db='amaury',
+autocommit=True)
+
+cursor = connection.cursor()
 
 ## En cas de validation d'un nouveau personnage, l'intégrer ici.
 def change(nom):
