@@ -34,17 +34,6 @@ f = open(r'/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/up
 filename =  csv.reader(f)
 
 
-
-def conversion(number):
-    if number < 50:
-        result = 0
-    if number >= 50 and number < 100:
-        result = 3
-    if number > 100:
-        result = 5
-    return result
-    #print(+ int(result))
-
 ## En cas de validation d'un nouveau personnage, l'intégrer ici.
 def change(nom):
     #Berserkers
@@ -187,7 +176,13 @@ for l in filename:
     b = int(l[1])
     Name.append(a)
     Votes.append(b)
-    XP.append(conversion(b))
+    if b < 50:
+        result = 0
+    if b >= 50 and b < 100:
+        result = 3
+    if b > 100:
+        result = 5
+    XP.append(result)
 
 # print(Name,Votes,XP)
 
@@ -210,6 +205,7 @@ for x,y in zip(Name,XP):
 print("[/list]")
 
 print("AoG compte", len(Votes),"votants pour cette session.")
+print("Merci à vous et bon jeu sur AoG !")
 print("--------")
 print("Légende :")
 print("Saint : [color=#4A6A87]")
