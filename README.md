@@ -13,3 +13,7 @@ Les objectifs :
 * [Faire sortir les informations pour générer un message intégrant la mise en forme sur forum] => à faire
 * [Commencer à faire des requêtes avec le forum pour associer les noms aux groupes et leur attribuer la police de leur faction et ainsi améliorer le post] => à faire
 * [Faire des requêtes sur le PA du forum pour ajouter les XP automatiquement aux différents membres] => à faire
+
+Ressources :
+
+* [Créez vos applications web avec Django](<https://openclassrooms.com/fr/courses/1871271-developpez-votre-site-web-avec-le-framework-django/1871361-creez-vos-applications-web-avec-django>)
