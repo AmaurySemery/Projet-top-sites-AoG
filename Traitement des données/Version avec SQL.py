@@ -46,8 +46,8 @@ cursor = connection.cursor()
 def change(nom):
     request = "SELECT `Police` FROM `Joueurs` WHERE `Nom` LIKE"+ "\"" + nom + "\""
     response = cursor.execute(request)
-    name = cursor.fetchall()
-    return str(name)
+    name = cursor.fetchone()
+    return str(name[0])
 
 Name = []
 Votes = []
