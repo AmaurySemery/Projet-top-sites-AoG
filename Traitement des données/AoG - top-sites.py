@@ -6,7 +6,7 @@ import csv
 
 import pandas as pd
 ## Ici, tu mets le chemin de ton fichier de base CSV récupéré depuis top-booster (NB : "r" avant le chemin peut ne pas être obligatoire suivant sa structure)
-f=pd.read_csv(r"C:\Divers\Python codes\Projet-top-sites-AoG\Dossiers-CSV\upgrade_classement_SSAoG_CSV.csv",sep =';')
+f=pd.read_csv(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade_classement_SSAoG_CSV.csv",sep =';')
 #print(f)
 keep_col = ['Pseudo','Total']
 #print(keep_col)
@@ -14,15 +14,15 @@ new_f = f[keep_col]
 #print(new_f)
 
 ## Ici, tu mets le chemin de ton deuxième fichier CSV
-new_f.to_csv(r"C:\Divers\Python codes\Projet-top-sites-AoG\Dossiers-CSV\upgrade1_classement_SSAoG_CSV.csv", index=False)
+new_f.to_csv(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade1_classement_SSAoG_CSV.csv", index=False)
 #print(keep_col)
 
 # Je récupère le fichier nouvellement créé pour travailler dessus. Je retravaille ensuite le fichier pour supprimer la première ligne, autrement, la chaîne de caractère en première ligne va m'empêcher de faire mes calculs de conversions en int
 
 ## Ici, tu mets le chemin de ton deuxième fichier CSV, et pour le lien suivant, celui du troisième fichier
 
-with open(r"C:\Divers\Python codes\Projet-top-sites-AoG\Dossiers-CSV\upgrade1_classement_SSAoG_CSV.csv",'r') as f:
-    with open(r"C:\Divers\Python codes\Projet-top-sites-AoG\Dossiers-CSV\upgrade2_classement_SSAoG_CSV.csv",'w') as f1:
+with open(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade1_classement_SSAoG_CSV.csv",'r') as f:
+    with open(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade2_classement_SSAoG_CSV.csv",'w') as f1:
         next(f) # skip header line
         for line in f:
             f1.write(line)
@@ -30,7 +30,7 @@ with open(r"C:\Divers\Python codes\Projet-top-sites-AoG\Dossiers-CSV\upgrade1_cl
 # Je récupère le dernier fichier pour retravailler dessus.
 ## Ici, tu remets le chemin du troisième fichier CSV qui sera traité pour la suite des opérations
 
-f = open(r'C:\Divers\Python codes\Projet-top-sites-AoG\Dossiers-CSV\upgrade2_classement_SSAoG_CSV.csv', 'r')
+f = open(r'/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade2_classement_SSAoG_CSV.csv', 'r')
 filename =  csv.reader(f)
 
 
