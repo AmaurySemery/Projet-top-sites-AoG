@@ -44,10 +44,10 @@ cursor = connection.cursor()
 
 ## En cas de validation d'un nouveau personnage, l'intégrer ici.
 def change(nom):
-    request = "SELECT `Police` FROM `Joueurs` WHERE `Nom` LIKE "+ "\"" + nom + "\""
+    request = "SELECT `Police` FROM `Joueurs` WHERE `Nom` LIKE"+ "\"" + nom + "\""
     response = cursor.execute(request)
     name = cursor.fetchall()
-    return name
+    return str(name)
 
 Name = []
 Votes = []
