@@ -15,21 +15,23 @@ import os, glob
 
 f=pd.read_csv(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/classement_SSAoG_CSV.csv",sep =';',comment='#')
 
-r = csv.DictReader(f, fieldnames = ["Pseudo", "Classement", "IDmark", "ID+mark", "Total"], delimiter = ",")
+r = csv.DictReader(f, fieldnames = ["Pseudo", "Classement", "IDmark", "IDmark2", "Total"], delimiter = ",")
 
-       lon, lat, count = [], [], []
-       for row in r:
-           lon.append(float(row['Lon']))
-           lat.append(float(row['Lat']))
-           count.append(int(row['Count']))
+pseudo, classement, IDmark, IDmark2, total = [], [], [], [], []
+for row in r:
+    pseudo.append(str(row['Pseudo']))
+    classement.append(str(row['Classement']))
+    IDmark.append(str(row['IDmark']))
+    IDmark2.append(str(row['IDmark2']))
+    total.append(str(row['Total']))
 
 keep_col = ['Pseudo','Total']
 #print(keep_col)
-new_t = t[keep_col]
+new_r = r[keep_col]
 #print(new_f)
 
 ## Ici, tu mets le chemin de ton deuxième fichier CSV
-new_f.to_csv(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade1_classement_SSAoG_CSV.csv", index=False)
+new_r.to_csv(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade1_classement_SSAoG_CSV.csv", index=False)
 #print(keep_col)
 
 # Je récupère le fichier nouvellement créé pour travailler dessus. Je retravaille ensuite le fichier pour supprimer la première ligne, autrement, la chaîne de caractère en première ligne va m'empêcher de faire mes calculs de conversions en int
