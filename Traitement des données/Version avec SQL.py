@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Placer un except pour faire tourner le programme même si des noms ne correspondent pas à la BDD
 # Régler le problème de la ligne qui définit les noms de colonnes. C'est une ligne de commentaire donc elle n'est pas intégrée en l'état dans le programme
 
@@ -8,55 +9,6 @@ import pymysql
 import pandas as pd
 import os, glob
 
-# Lire le fichier, puis garder les colonnes qui m'intéressent, le nouveau tableau étant envoyé dans un autre fichier
-
-
-## Ici, tu mets le chemin de ton fichier de base CSV récupéré depuis top-booster (NB : "r" avant le chemin peut ne pas être obligatoire suivant sa structure)
-
-f=pd.read_csv(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/classement_SSAoG_CSV.csv",sep =';',comment='#')
-
-r = csv.DictReader(f, fieldnames = ["Pseudo", "Classement", "IDmark", "IDmark2", "Total"], delimiter = ",")
-
-pseudo, classement, IDmark, IDmark2, total = [], [], [], [], []
-for row in r:
-    pseudo.append(str(row['Pseudo']))
-    classement.append(str(row['Classement']))
-    IDmark.append(str(row['IDmark']))
-    IDmark2.append(str(row['IDmark2']))
-    total.append(str(row['Total']))
-
-keep_col = ['Pseudo','Total']
-#print(keep_col)
-new_r = r[keep_col]
-#print(new_f)
-
-## Ici, tu mets le chemin de ton deuxième fichier CSV
-new_r.to_csv(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade1_classement_SSAoG_CSV.csv", index=False)
-#print(keep_col)
-
-# Je récupère le fichier nouvellement créé pour travailler dessus. Je retravaille ensuite le fichier pour supprimer la première ligne, autrement, la chaîne de caractère en première ligne va m'empêcher de faire mes calculs de conversions en int
-
-## Ici, tu mets le chemin de ton deuxième fichier CSV, et pour le lien suivant, celui du troisième fichier
-
-with open(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade1_classement_SSAoG_CSV.csv",'r') as f:
-    with open(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade2_classement_SSAoG_CSV.csv",'w') as f1:
-        next(f) # skip header line
-        for line in f:
-            f1.write(line)
-
-# Je récupère le dernier fichier pour retravailler dessus.
-## Ici, tu remets le chemin du troisième fichier CSV qui sera traité pour la suite des opérations
-
-f = open(r'/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade2_classement_SSAoG_CSV.csv', 'r')
-filename =  csv.reader(f)
-
-connection = pymysql.connect(host='popschool-willems.fr',
-                             user='amaury',
-                             password='amaury',
-                             db='amaury',
-autocommit=True)
-
-cursor = connection.cursor()
 
 ## En cas de validation d'un nouveau personnage, l'intégrer ici.
 def change(nom):
@@ -68,14 +20,32 @@ def change(nom):
         name = "Err"
     return str(name[0])
 
+# Lire le fichier, puis garder les colonnes qui m'intéressent, le nouveau tableau étant envoyé dans un autre fichier
+
+
+## Ici, tu mets le chemin de ton fichier de base CSV récupéré depuis top-booster (NB : "r" avant le chemin peut ne pas être obligatoire suivant sa structure)
+
+f=open(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/classement_SSAoG_CSV.csv")
+
+r = csv.DictReader(filter(lambda row: row[0]!='#',f), fieldnames = ["Pseudo", "Classement", "IDmark", "IDmark2", "Total"], delimiter = ";")
+# Je récupère le dernier fichier pour retravailler dessus.
+## Ici, tu remets le chemin du troisième fichier CSV qui sera traité pour la suite des opérations
+
+connection = pymysql.connect(host='popschool-willems.fr',
+                             user='amaury',
+                             password='amaury',
+                             db='amaury',
+autocommit=True)
+
+cursor = connection.cursor()
+
 Name = []
 Votes = []
 XP = []
 Final = []
-
-for l in filename:
-    a = l[0]
-    b = int(l[1])
+for row in r:
+    a = row['Pseudo']
+    b = int(row['Total'])
     Name.append(a)
     Votes.append(b)
     if b < 50:
