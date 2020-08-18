@@ -51,7 +51,10 @@ cursor = connection.cursor()
 def change(nom):
     request = "SELECT `Police` FROM `Joueurs` WHERE `Nom` LIKE"+ "\"" + nom + "\""
     response = cursor.execute(request)
+    if response == True:
         name = cursor.fetchone()
+    else:
+        name = "Err"
     return str(name[0])
 
 Name = []
