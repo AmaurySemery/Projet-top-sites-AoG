@@ -12,7 +12,11 @@ import pandas as pd
 
 ## Ici, tu mets le chemin de ton fichier de base CSV récupéré depuis top-booster (NB : "r" avant le chemin peut ne pas être obligatoire suivant sa structure)
 f=pd.read_csv(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/classement_SSAoG_CSV.csv",sep =';',comment='#')
-#print(f)
+with open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/classement_SSAoG_CSV.csv', 'w', newline='') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=';',
+                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
+    spamwriter.writerow(['Pseudo', 'Classement', 'IDmark','ID+mark','Total'])
+print(f)
 
 keep_col = ['Pseudo','Total']
 #print(keep_col)
