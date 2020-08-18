@@ -6,24 +6,26 @@
 import csv
 import pymysql
 import pandas as pd
+import os, glob
 
 # Lire le fichier, puis garder les colonnes qui m'intéressent, le nouveau tableau étant envoyé dans un autre fichier
 
 
 ## Ici, tu mets le chemin de ton fichier de base CSV récupéré depuis top-booster (NB : "r" avant le chemin peut ne pas être obligatoire suivant sa structure)
-with open('/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/Fichier de démarrage.csv', 'w', newline='') as csvfile:
-    spamwriter = csv.writer(csvfile, delimiter=';',
-                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
-    spamwriter.writerow(['Pseudo', 'Classement', 'IDmark','ID+mark','Total'])
 
 f=pd.read_csv(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/classement_SSAoG_CSV.csv",sep =';',comment='#')
 
+new_f['Pseudo', 'Classement', 'IDmark','ID+mark','Total']
+
+new_f.to_csv(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade_classement_SSAoG_CSV.csv", index=False)
 
 #print(f)
 
+t = pd.read_csv((r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade_classement_SSAoG_CSV.csv",sep =';',comment='#')
+
 keep_col = ['Pseudo','Total']
 #print(keep_col)
-new_f = f[keep_col]
+new_t = t[keep_col]
 #print(new_f)
 
 ## Ici, tu mets le chemin de ton deuxième fichier CSV
