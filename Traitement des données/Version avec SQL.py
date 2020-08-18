@@ -15,13 +15,13 @@ import os, glob
 
 f=pd.read_csv(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/classement_SSAoG_CSV.csv",sep =';',comment='#')
 
-new_f['Pseudo', 'Classement', 'IDmark','ID+mark','Total']
+r = csv.DictReader(f, fieldnames = ["Pseudo", "Classement", "IDmark", "ID+mark", "Total"], delimiter = ",")
 
-new_f.to_csv(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade_classement_SSAoG_CSV.csv", index=False)
-
-#print(f)
-
-t = pd.read_csv((r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/upgrade_classement_SSAoG_CSV.csv",sep =';',comment='#')
+       lon, lat, count = [], [], []
+       for row in r:
+           lon.append(float(row['Lon']))
+           lat.append(float(row['Lat']))
+           count.append(int(row['Count']))
 
 keep_col = ['Pseudo','Total']
 #print(keep_col)
