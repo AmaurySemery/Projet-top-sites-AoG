@@ -49,12 +49,9 @@ cursor = connection.cursor()
 
 ## En cas de validation d'un nouveau personnage, l'intégrer ici.
 def change(nom):
-    try:
-        request = "SELECT `Police` FROM `Joueurs` WHERE `Nom` LIKE"+ "\"" + nom + "\""
-        response = cursor.execute(request)
+    request = "SELECT `Police` FROM `Joueurs` WHERE `Nom` LIKE"+ "\"" + nom + "\""
+    response = cursor.execute(request)
         name = cursor.fetchone()
-    except Exception as error:
-        print("Le nom n'est pas valide ou n'existe pas dans la BDD")
     return str(name[0])
 
 Name = []
