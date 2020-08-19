@@ -12,7 +12,7 @@ def accueil():
 	
 @app.route('/pers/<name>')
 def pers(name):
-	return render_template("page1.html")
+	return render_template("page1.html",title="Cool !",username=name)
 
 if __name__ == '__main__':
 	app.run()
