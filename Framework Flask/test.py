@@ -1,3 +1,4 @@
+from flask import render_template
 from flask import Flask
 app = Flask(__name__)
 
@@ -11,7 +12,7 @@ def accueil():
 	
 @app.route('/pers/<name>')
 def pers(name):
-	return "hellow " + name
+	return render_template("page1.html")
 
 if __name__ == '__main__':
 	app.run()
