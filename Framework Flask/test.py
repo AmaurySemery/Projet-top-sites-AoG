@@ -11,7 +11,7 @@ def accueil():
 	
 @app.route('/pers/<name>/<age>')
 def pers(name,age):
-	return "hellow " + name + age
+	return "hellow " + name + " " + age
 
 if __name__ == '__main__':
 	app.run()
