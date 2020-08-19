@@ -9,9 +9,9 @@ def home():
 def accueil():
 	return "Bienvenue! <a href='/'> retour </a>"
 	
-@app.route('/pers/<name>/<age>')
-def pers(name,age):
-	return "hellow " + name + " " + age
+@app.route('/pers/<name>')
+def pers(name):
+	return "hellow " + name
 
 if __name__ == '__main__':
 	app.run()
