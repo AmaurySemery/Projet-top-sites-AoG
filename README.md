@@ -17,3 +17,4 @@ Les objectifs :
 Ressources :
 
 * [Créez vos applications web avec Django](<https://openclassrooms.com/fr/courses/1871271-developpez-votre-site-web-avec-le-framework-django/1871361-creez-vos-applications-web-avec-django>)
+* [Apprenez à créer votre site web avec HTML5 et CSS3](<https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3>)
