@@ -19,3 +19,4 @@ Ressources :
 * [Créez vos applications web avec Django](<https://openclassrooms.com/fr/courses/1871271-developpez-votre-site-web-avec-le-framework-django/1871361-creez-vos-applications-web-avec-django>)
 * [Apprenez à créer votre site web avec HTML5 et CSS3](<https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3>)
 * [Le framework Flask | Documentation](<https://perso.liris.cnrs.fr/pierre-antoine.champin/2017/progweb-python/cours/cm2.html>)
+* [Concevez un site avec Flask](<https://openclassrooms.com/fr/courses/4425066-concevez-un-site-avec-flask>)
