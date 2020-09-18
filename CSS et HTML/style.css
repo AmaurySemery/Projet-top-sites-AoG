@@ -62,3 +62,152 @@ Pour faire un commentaire, il suffit de taper
 /* pour terminer le commentaire */
 
 
+/* Maintenant, si on veut que certains paragraphes seulement soient écrits d'une manière différente, on peut utiliser des attributs spéciaux qui fonctionnent sur toutes les balises :
+l'attribut class  ;
+l'attribut id 
+Ces attributs sont quasiment identiques. L'attribut class peut être mis sur n'importe quelle balise, aussi bien titre que paragraphe, etc.*/
+
+<h1 class=""> bla</h1>
+<p class=""> bla</p>
+<img class="" />
+
+/* Il faut mettre un nom qui sert à identifier la balise. Le nom doit commencer par une lettre. Par exemple, la classe introduction : */
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Premiers tests du CSS</title>
+    </head>
+
+    <body>
+        <h1>Mon super site</h1>
+        
+        <p class="introduction">Bonjour et bienvenue sur mon site !</p>
+        <p>Pour le moment, mon site est un peu <em>vide</em>. Patientez encore un peu !</p>
+    </body>
+</html>
+
+/* Maintenant que c'est fait, votre paragraphe est identifié. Il a un nom : introduction  . Vous allez pouvoir réutiliser ce nom dans le fichier CSS pour dire : « Je veux que seules les balises qui ont comme nom 'introduction' soient affichées en bleu ». Exemple : */
+
+.introduction
+{
+    color: blue;
+}
+
+/* L'attribut id fonctionne de la même manière, à un détail près : il ne peut être utilisé qu'une fois dans le code. Cela peut être utile pour faire du javascript, afin de reconnaître certaines balises. En pratique, id ne sera mis que sur des éléments qui sont uniques dans la page, comme par exemple le logo : */
+
+<img src="images/logo.png" alt="Logo du site" id="logo">
+
+/* Si vous utilisez des id  , lorsque vous définirez leurs propriétés dans le fichier CSS, il faudra faire précéder le nom de l' id  par un dièse (#) :*/
+
+#logo
+{
+    /* Indiquez les propriétés CSS ici */
+}
+
+/* Voyons maintenant les balises universelles. Car en l'état, class est un attribut qui ne peut être mis que sur une balise. Il existe deux autres balises dites universelles :
+
+    <span> </span>  : c'est une balise de type inline, c'est-à-dire une balise que l'on place au sein d'un paragraphe de texte pour sélectionner certains mots uniquement. Les balises <strong>  et <em>  sont de la même famille. Cette balise s'utilise donc au milieu d'un paragraphe et c'est celle dont nous allons nous servir pour colorer « bienvenue » ;
+
+    <div> </div>  : c'est une balise de type block, qui entoure un bloc de texte. Les balises <p>  ,  <h1>  , etc., sont de la même famille. Ces balises ont quelque chose en commun : elles créent un nouveau « bloc » dans la page et provoquent donc obligatoirement un retour à la ligne. <div>  est une balise fréquemment utilisée dans la construction d'un design, comme nous le verrons plus tard.
+  
+  Pour le moment donc, nous allons utiliser plutôt la balise <span>  . On la met autour de « bienvenue », on lui ajoute une classe (du nom qu'on veut), on crée le CSS et c'est gagné !*/
+  
+<p>Bonjour et <span class="salutations">bienvenue</span> sur mon site !</p>
+
+.salutations
+{
+    color: blue;
+}
+
+/* Pour appliquer un style, il existe les sélecteurs avancés. Il s'agit de cibler le texte dont on veut changer la forme. Ceux qu'on a déjà vu sont : */
+
+p
+{
+
+}
+
+h1, em
+{
+
+}
+
+.class
+{
+
+}
+
+#id
+{
+
+}
+
+/* Il en existe des dizaines d'autres.
+* : sélecteur universel => Sélectionne toutes les balises sans exception. On l'appelle le sélecteur universel. */
+
+*
+{
+
+}
+
+
+/* A B : une balise contenue dans une autre => Sélectionne toutes les balises <em>  situées à l'intérieur d'une balise <h3>  . Notez qu'il n'y a pas de virgule entre les deux noms de balises. */
+
+h3 em
+{
+
+}
+
+/* Exemple de code HTML correspondant :*/
+
+<h3>Titre avec <em>texte important</em></h3>
+
+/* A + B : une balise qui en suit une autre => Sélectionne la première balise <p>  située après un titre <h3>  */
+
+h3 + p
+{
+
+}
+
+/* exemple : */
+
+<h3>Titre</h3>
+
+<p>Paragraphe</p>
+
+/* A[attribut] : une balise qui possède un attribut => Sélectionne tous les liens <a>  qui possèdent un attribut title  .*/
+
+a[title]
+{
+
+}
+
+/* Exemple : */
+
+<a href="http://site.com" title="Infobulle">
+
+/* A[attribut="Valeur"] : une balise, un attribut et une valeur exacte => Idem, mais l'attribut doit en plus avoir exactement pour valeur « Cliquez ici ».*/
+
+a[title="Cliquez ici"]
+{
+
+}
+
+/* exemple :*/
+
+<a href="http://site.com" title="Cliquez ici">
+
+/* A[attribut*="Valeur"] : une balise, un attribut et une valeur => Idem, l'attribut doit cette fois contenir dans sa valeur le mot « ici » (peu importe sa position).*/
+
+a[title*="ici"]
+{
+
+}
+
+/* exemple :*/
+
+<a href="http://site.com" title="Quelque part par ici">
+
+/* Je ne vous ai présenté ici qu'une partie des sélecteurs CSS, mais sachez qu'il en existe beaucoup d'autres. Si vous voulez une liste complète, vous pouvez vous renseigner directement à la source : sur le site du W3C ! C'est très complet.*/
