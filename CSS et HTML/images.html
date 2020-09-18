@@ -37,3 +37,51 @@ Exemple du code html :
     Vous souhaitez voir l'image dans sa taille d'origine ? Cliquez dessus !<br />
     <a href="Images/trou_noir.jpg"><img src="Images/trou_noir_miniature.jpg" alt="Photo de trou noir" title="Cliquez pour agrandir" /></a>
 </p>
+
+Parfois, certains navigateurs choisissent d'afficher un cadre bleu (ou violet) pas très esthétique autour de votre image cliquable.
+Heureusement, nous pourrons retirer ce cadre dans peu de temps grâce au CSS.
+
+Les figures sont des éléments qui viennent enrichir le texte pour compléter les informations de la page.
+Les figures peuvent être de différents types :
+
+    images ;
+
+    codes source ;
+
+    citations ;
+
+    etc.
+    
+    En HTML5, on dispose de la balise  <figure></figure>  . Voici comment on pourrait l'utiliser :
+    
+    <figure>
+    <img src="Images/figure.png" alt="Bloc-Notes" />
+</figure>
+
+Une figure est le plus souvent accompagnée d'une légende. Pour ajouter une légende, utilisez la balise  <figcaption></figcaption>  à l'intérieur de la balise  <figure></figure>  , comme ceci :
+<figure>
+    <img src="Images/figure.png" alt="Bloc-Notes" />
+    <figcaption>Le logiciel Bloc-Notes</figcaption>
+</figure>
+
+Si on fait de l'image une figure, l'image peut être située en dehors d'un paragraphe.
+Exemple :
+
+<p>Connaissez-vous le logiciel Bloc-Notes ? On peut faire des sites web avec !</p>
+
+<figure>
+    <img src="Images/figure.png" alt="Bloc-Notes" />
+    <figcaption>Le logiciel Bloc-Notes</figcaption>
+</figure>
+
+Si l'image n'apporte aucune information (simple illustration pour décorer), on la place dans un paragraphe, sinon, on la place dans une figure.
+La balise figure a un rôle avant tout sémantique. Cela veut dire qu'elle indique à l'ordinateur que l'image a du sens et qu'elle est importante pour la bonne compréhension du texte. Cela peut permettre à un programme de récupérer toutes les figures du texte et de les référencer dans une table des figures, par exemple.
+Enfin, une figure peut très bien comporter plusieurs images.
+Exemple où ça se justifierait :
+<figure>
+    <img src="images/internetexplorer.png" alt="Logo Internet Explorer" />
+    <img src="images/firefox.png" alt="Logo Mozilla Firefox" />
+    <img src="images/chrome.png" alt="Logo Google Chrome" />
+    <figcaption>Logos des différents navigateurs</figcaption>
+</figure>
+
