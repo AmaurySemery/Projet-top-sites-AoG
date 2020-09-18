@@ -80,3 +80,25 @@ Exemple :
     <a href="page 1.html#rollers">Les rollers</a><br />
     <a href="page 1.html#arc">Le tir à l'arc</a><br />
 </p>
+
+On peut également afficher une infobulle au survol.
+Pour se faire, il faut utiliser l'attribut title qui affiche une bulle d'aide lorsqu'on pointe sur le lien. C'est un attribut facultatif.
+
+Exemple :
+<p>Bonjour. Souhaitez-vous visiter <a href="https://openclassrooms.com" title="Vous ne le regretterez pas !">OpenClassrooms</a> ?</p>
+
+On peut forcer l'ouverture d'un lien dans une nouvelle fenêtre. Il suffit d'ajouter target="_blank" à la balise <a></a>
+Exemple :
+<p>Bonjour. Souhaitez-vous visiter <a href="https://openclassrooms.com" title="Vous ne le regretterez pas !" target="_blank">OpenClassrooms</a> ?</p>
+
+Pour envoyer un mail, on utilise des liens de type mailto.
+Exemple :
+<p><a href="mailto:votrenom@bidule.com">Envoyez-moi un e-mail !</a></p>
+En cliquant sur le lien, un nouveau message vide s'ouvre, prêt à être envoyé à l'adresse mail indiquée.
+
+Pour télécharger un fichier, il faut procéder comme si on faisait un lien vers une page web, mais en indiquant cette fois le nom du fichier à télécharger.
+Par exemple, si on veut faire télécharger monfichier.zip, il faut simplement placer le fichier dans le même dossier que la page web (ou dans un sous dossier) et faire un lien vers ledit fichier :
+
+<p><a href="monfichier.zip">Télécharger le fichier</a></p>
+
+Le navigateur, voyant qu'il ne s'agit pas d'une page web à afficher, va lancer la procédure de téléchargement lorsqu'on cliquera sur le lien.
