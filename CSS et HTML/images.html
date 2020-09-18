@@ -1,1 +1,23 @@
+Les images
 
+    Une photo : utilisez un JPEG.
+
+    N'importe quel graphique avec peu de couleurs (moins de 256) : utilisez un PNG 8 bits, ou éventuellement un GIF.
+
+    N'importe quel graphique avec beaucoup de couleurs : utilisez un PNG 24 bits.
+
+    Une image animée : utilisez un GIF animé.
+
+Prendre l'habitude d'enregistrer les fichiers avec des noms en minuscules, sans espace ni accent ; par exemple :  mon_image.png
+
+Pour insérer une image, utiliser la balise orpheline <img />
+Elle doit être accompagnée de deux attributs obligatoires :
+    src  : il permet d'indiquer où se trouve l'image que l'on veut insérer. Vous pouvez soit mettre un chemin absolu (ex. :  http://www.site.com/fleur.png  ), soit mettre le chemin en relatif (ce qu'on fait le plus souvent). Ainsi, si votre image est dans un sous-dossier  images  , vous devrez taper :  src="images/fleur.png"
+
+    alt  : cela signifie « texte alternatif ». On doit toujours indiquer un texte alternatif à l'image, c'est-à-dire un court texte qui décrit ce que contient l'image. Ce texte sera affiché à la place de l'image si celle-ci ne peut pas être téléchargée (cela arrive), ou dans les navigateurs de personnes handicapées (non-voyants) qui ne peuvent malheureusement pas « voir » l'image. Cela aide aussi les robots des moteurs de recherche pour les recherches d'images. Pour la fleur, on mettrait par exemple :  alt="Une fleur"
+
+Exemple d'insertion d'image :
+<p>
+    Voici une photo que j'ai prise lors de mes dernières vacances à la montagne :<br />
+    <img src="Images/trou_noir.jpg" alt="Photo de trou noir" />
+</p>
