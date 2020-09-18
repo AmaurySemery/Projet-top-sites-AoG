@@ -22,3 +22,17 @@ Pour faire un lien renvoyant à une autre page de notre site, il faut d'abord cr
 Il faudra utiliser la balise <a href="page2.html"> pour donner ce qu'on appelle un lien relatif (au contraire d'un lien absolu comme vu précédemment), ce qui donne par exemple :
 
 <p>Bonjour. Souhaitez-vous consulter <a href="page 2.html">la page 2</a> ?</p>
+
+Si les pages se trouvent dans un autre dossier, il faut faire apparaître le nom dudit dossier dans la balise. Par exemple, pour un dossier "contenu" :
+
+<a href="contenu/page 3.html">Lien vers page 3</a>
+
+Et s'il y avait eu d'autres dossiers, ça aurait pris cette forme :
+
+<a href="contenu/autredossier/page 3.html">
+
+Ceci dit, si le fichier cible est placé dans un dossier plus haut dans l'arborescence, il faut écrire de cette manière avec deux points :
+
+<a href="../page2.html">
+	
+L'exemple se trouve sur la page 3.
