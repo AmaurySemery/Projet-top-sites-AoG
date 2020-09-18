@@ -2,3 +2,63 @@ p
 {
     color: blue;
 }
+
+/* => « Je veux que tous mes paragraphes soient écrits en bleu. »
+
+Dans un code CSS comme celui-ci, on trouve trois éléments différents :
+
+    des noms de balises : on écrit les noms des balises dont on veut modifier l'apparence. Par exemple, si je veux modifier l'apparence de tous les paragraphes <p></p>  , je dois écrire p  ;
+
+    des propriétés CSS : les « effets de style » de la page sont rangés dans des propriétés. Il y a par exemple la propriété color  qui permet d'indiquer la couleur du texte, font-size  qui permet d'indiquer la taille du texte, etc. Il y a beaucoup de propriétés CSS et, comme je vous l'ai dit, je ne vous obligerai pas à les connaître toutes par cœur ;
+
+    les valeurs : pour chaque propriété CSS, on doit indiquer une valeur. Par exemple, pour la propriété color  , il faut indiquer le nom de la couleur. Pour font-size  , il faut indiquer quelle taille on veut, etc.
+    
+Schématiquement, une feuille de style CSS ressemble donc à cela : */
+
+balise1
+{
+    propriete1: valeur1;
+    propriete2: valeur2;
+    propriete3: valeur3;
+}
+
+balise2
+{
+    propriete1: valeur1;
+    propriete2: valeur2;
+    propriete3: valeur3;
+    propriete4: valeur4;
+}
+
+balise3
+{
+    propriete1: valeur1;
+}
+
+Un exemple concret :
+
+h1
+{
+    color: blue;
+}
+
+em
+{
+    color: blue;
+}
+
+Peut s'écrire :
+
+h1, em
+{
+    color: blue;
+}
+
+/* Comme en HTML, il est possible de mettre des commentaires. Cette fois, ils ne seront pas affichés. Ils servent simplement à indiquer des information pour que le développeur s'y retrouve dans un long fichier CSS.
+En règle générale, le fichier HTML est assez court et la feuille CSS assez longue.
+Il est possible de créer plusieurs fichiers CSS si on veut séparer un peu le code CSS, en fonction des différentes sections du site, par exemple.
+Pour faire un commentaire, il suffit de taper 
+* /* suivi du commentaire, puis */ 
+/* pour terminer le commentaire */
+
+
