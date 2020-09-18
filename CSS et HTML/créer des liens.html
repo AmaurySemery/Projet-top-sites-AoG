@@ -1,0 +1,24 @@
+Pour aller d'une page à une autre sur un site web, il faut utiliser un lien.
+
+On peut faire un lien d'une page a.html vers une page b.html, mais on peut aussi faire un lien vers un autre site.
+
+Pour faire un lien, il faut utiliser la balise <a> avec l'attribut href afin d'indiquer vers quelle page le lien doit conduire, ce qui donne par exemple :
+
+<a href="https://openclassrooms.com">OpenClassrooms</a>
+
+Pour placer le lien dans un paragraphe, on fait comme suit :
+
+<p>Bonjour. Vous souhaitez visiter <a href="https://openclassrooms.com">OpenClassrooms</a> ?<br />
+C'est un bon site ;o)</p>
+
+Par défaut, le lien s'affiche en bleu souligné. Et si on a déjà ouvert la page, le lien s'affiche en violet. CSS permettra de modifier ça.
+
+Pour faire un lien vers un autre site, il suffit donc de copier son URL.
+
+Si vous faites un lien vers un site qui comporte une adresse un peu bizarre avec des &, comme http://www.site.com/?data=15&name=mateo21  , vous devrez remplacer tous les « & » par « &amp; » dans votre lien, comme ceci :http://www.site.com/?data=15&amp;name=mateo21  .
+Vous ne verrez pas la différence, mais cela est nécessaire pour avoir une page web correctement construite en HTML5.
+
+Pour faire un lien renvoyant à une autre page de notre site, il faut d'abord créer deux fichiers correspondant à deux pages HTML différentes. Par exemple, page1.hmtl et page2.html. Deux fichiers qui doivent se trouver dans un même dossier.
+Il faudra utiliser la balise <a href="page2.html"> pour donner ce qu'on appelle un lien relatif (au contraire d'un lien absolu comme vu précédemment), ce qui donne par exemple :
+
+<p>Bonjour. Souhaitez-vous consulter <a href="page 2.html">la page 2</a> ?</p>
