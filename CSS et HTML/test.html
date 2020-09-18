@@ -238,3 +238,29 @@ La balise <mark> permet de faire ressortir visuellement une portion de texte, ce
 Par défaut,<mark> a pour effet de surligner le texte. On pourra changer l'affichage en CSS (décider de surligner dans une autre couleur, d'encadrer le texte, etc.). C'est le même principe que ce que je vous disais pour les balises précédentes : elles indiquent le sens des mots et non pas comment ceux-ci doivent s'afficher.
 
 les balises em, strong et mark servent à indiquer le sens du texte. Strong par exemple ne met pas automatiquement en gras, il pourrait afficher en rouge ou que sais-je. C'est pour signifier que le texte est important, ce que les robots des moteurs de recherche peuvent capter avec leurs algorithmes en lisant le code source des pages.
+
+Pour jouer sur le sens de ces balises, on se sert de CSS. Après tout, le HTML définit le fond (contenu, logique des éléments) et le CSS la forme (apparence).
+Nous allons avancer plus loin dans le HTML avant d'attaquer le CSS à proprement parler, avec le sens de chacune de ses balises.
+
+Les listes permettent de mieux structurer le texte et d'ordonner les informations. Il en existe de deux sortes :
+-les listes non ordonnées ou listes à puces;
+-les listes ordonnées ou listes numérotées, ou encore énumérations.
+
+La liste non ordonnée permet de créer une liste sans notion d'ordre (pas de premier ni de dernier). Pour en créer une, il faut faire comme suit avec la balise <ul> :
+
+<ul></ul>
+
+Ce qui donne par exemple :
+
+<ul>
+    <li>Fraises</li>
+    <li>Framboises</li>
+    <li>Cerises</li>
+</ul>
+
+<ul> délimite toute la liste
+<li> délimite un élément de la liste
+
+Il est bien sûr possible d'imbriquer des listes dans des listes. Il suffit de fermer les balises dans le bon ordre.
+
+Maintenant, la liste ordonnée.
