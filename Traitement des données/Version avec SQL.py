@@ -9,7 +9,6 @@ import pymysql
 import pandas as pd
 import os, glob
 
-
 ## En cas de validation d'un nouveau personnage, l'intégrer ici.
 def change(nom):
     request = "SELECT `Police` FROM `Joueurs` WHERE `Nom` LIKE"+ "\"" + nom + "\""
