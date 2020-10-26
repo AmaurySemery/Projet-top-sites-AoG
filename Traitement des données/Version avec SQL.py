@@ -27,7 +27,7 @@ def change(nom):
 
 f=open(r"/home/popschool/Documents/GitHub/Projet-top-sites-AoG/Dossiers-CSV/classement_SSAoG_CSV.csv")
 
-r = csv.DictReader(filter(lambda row: row[0]!='#',f), fieldnames = ["Pseudo", "Classement", "IDmark", "IDmark2", "Total"], delimiter = ";")
+r = csv.DictReader(filter(lambda row: row[0]!='#',f), fieldnames = ["Pseudo", "Classement", "IDmark", "IDmark2", "Total"], delimiter = ";", encoding='latin-1')
 # Je récupère le dernier fichier pour retravailler dessus.
 ## Ici, tu remets le chemin du troisième fichier CSV qui sera traité pour la suite des opérations
 
