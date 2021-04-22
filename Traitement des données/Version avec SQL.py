@@ -49,9 +49,11 @@ for row in r:
     Votes.append(b)
     if b < 50:
         result = 0
-    if b >= 50 and b < 100:
+    if b >= 60 and b < 119:
+        result = 3
+    if b >= 120 and b < 179:
         result = 5
-    if b > 100:
+    if b >= 180:
         result = 8
     XP.append(result)
 
@@ -61,8 +63,8 @@ datedebut = input("Date début de requête (ex: 22/06): ")
 datefin = input("Date fin de requête (ex: 28/06): ")
 
 print("<blockquote>[center][b]Récompenses du "+datedebut+" au "+datefin+"[/b][/center]")
-print("Pour rappel, vous gagnez 5 XP par semaine si vous effectuez au moins <b>50</b> votes sur celle-ci.")
-print("Vous gagnez 8 XP au total si vous êtes parmi les 5 meilleurs votants ou que vous avez réalisé plus de 100 votes.")
+print("Pour rappel, vous gagnez 8 XP par semaine si vous effectuez au moins <b>180</b> votes sur celle-ci.")
+print("Vous gagnez 5 XP si vous avez entre <b>120 et 179</b> votes. Enfin, vous gagnez 3 XP si vous avez entre <b>60 et 119</b> votes.")
 print("Les récompensés sont donc les suivants :[list=1]")
 
 for x,y in zip(Name,XP):
