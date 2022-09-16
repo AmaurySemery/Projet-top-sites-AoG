@@ -56,7 +56,7 @@ keyrings.alt==3.1.1
 kiwisolver==1.0.1
 louis==3.8.0
 lxml==4.5.1
-Mako==1.0.7
+Mako==1.2.2
 Markdown==3.2.2
 MarkupSafe==1.1.0
 matplotlib==3.2.2
